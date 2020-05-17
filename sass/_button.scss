@@ -2,7 +2,7 @@
 %btn-base {
     display: inline-block; 
 
-    padding: 1em 2.7em;
+    padding: 1em 2.8em;
     border-radius: 10em;
 
     color: #fff;
@@ -12,7 +12,7 @@
 
 
     box-shadow: 0 0.3rem 1rem #0003;
-    transition: box-shadow .2s, transform .2s;
+    transition: box-shadow .2s, transform .2s ease-in;
 
     &:hover {
         box-shadow: 0 0.5rem 1.3rem #0003;
@@ -37,12 +37,9 @@
         $color-primary-3
     );
 
+    transition: opacity .2s;
 
     &:hover {
-        background: linear-gradient(
-        to right,
-        lighten($color-primary-2, 10%),
-        lighten($color-primary-3, 10%)
-    );
+        opacity: 75%;
     }
 }

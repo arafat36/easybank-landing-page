@@ -1,36 +1,44 @@
 .header { // flex-box
-    background-color: $color-grey-light;
-    display: flex;
-    align-items: center;
+    background: $color-grey-light url("../images/bg-intro-desktop.svg") no-repeat;
+    background-position: 47vw bottom;
+    background-size: 116rem;
+    
+    position: relative;
+    
 
-    padding: 10rem 16rem;
+    &__inner {
+        max-width: 120rem;
+        margin: 0 auto;
+        padding: 8.5em 1em;
+        display: flex;
+        align-items: center;
+    }
+
     &__text-box { // flex-item, grid
         // background-color: lightgreen;
         display: grid;
-        width: 36%;
+        flex: 0 1 45rem;
 
         grid-row-gap: 1.65em;
         justify-items: start;
-
-
     }
 
     &__btn { // grid-item
-        // width: auto;
-        // display: inline-block;
-        font-size: 1.5rem;
+        font-size: .8em;
     }
 
-    &__paragraph { // grid-item
+    // &__paragraph { // grid-item
 
-    }
+    // }
 
     &__mockups { // flex-item
-        position: relative;
+
     }
 
     &__img { // flex-item
         position: absolute;
-        width: 50rem;
+        height: 60vw;
+        top: -8vw;
+        right: -8vw; 
     }
 }

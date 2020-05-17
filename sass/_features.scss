@@ -1,15 +1,44 @@
 .features { // grid 
     //@extend %grid_4-2-1_col;
-    &__text-box { // grid item
+    background-color: $color-grey;
+
+    & > *:first-child {
+        display: grid;
+        grid-template-rows: 10rem min-content;
+        grid-row-gap: 7rem;
+        grid-column-gap: 0.2rem;
+    }
+
+    &__text-box { // grid item, grid
+        display: grid;
+        grid-row-gap: 1.5em;
+        grid-column: 1 / -1;
+        width: 56%;
     }
 
 }
 
-.feature { // grid item
-    &__icon {}
+.feature { // grid item, grid
+    display: grid;
+    grid-row-gap: 1.3em;
+
+    border-radius: .6rem;
+    padding: 2em .88em;
+
+    transition: transform .2s, background-color .2s;
+
+    &__icon {
+    }
 
     &__heading {}
 
-    &__paragraph {}
+    &__paragraph {
+        font-size: 0.9em; 
+    }
+
+    &:hover {
+        transform: translateY(-.5rem);
+        background-color: darken($color-grey, 4%);
+    }
 
 }

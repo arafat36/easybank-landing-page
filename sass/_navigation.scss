@@ -2,11 +2,15 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-
+    background-color: #fff;
+    
     padding: 0 15rem;
     height: 7rem;
-
+    
+    position: relative;
     z-index: 10;
+
+    box-shadow: 0 0 3rem #00000014;
 
     &__logo-box { // flex-item
         flex-basis: 16rem;
