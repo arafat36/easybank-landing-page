@@ -1,0 +1,20 @@
+%heading {
+    color: $color-primary-1;
+}
+
+.heading-1 {
+    @extend %heading;
+    font-size: 3em;
+}
+
+.heading-2 {
+    @extend %heading;
+}
+
+.heading-3 {
+    @extend %heading;
+}
+
+.heading-4 {
+    @extend %heading;
+}

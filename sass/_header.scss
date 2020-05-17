@@ -1,0 +1,36 @@
+.header { // flex-box
+    background-color: $color-grey-light;
+    display: flex;
+    align-items: center;
+
+    padding: 10rem 16rem;
+    &__text-box { // flex-item, grid
+        // background-color: lightgreen;
+        display: grid;
+        width: 36%;
+
+        grid-row-gap: 1.65em;
+        justify-items: start;
+
+
+    }
+
+    &__btn { // grid-item
+        // width: auto;
+        // display: inline-block;
+        font-size: 1.5rem;
+    }
+
+    &__paragraph { // grid-item
+
+    }
+
+    &__mockups { // flex-item
+        position: relative;
+    }
+
+    &__img { // flex-item
+        position: absolute;
+        width: 50rem;
+    }
+}

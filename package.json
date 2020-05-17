@@ -4,7 +4,7 @@
   "description": "Easybank Landing Page",
   "main": "index.js",
   "scripts": {
-    "watch:sass": "node-sass src/sass/main.scss build/css/style.css -w -r",
+    "watch:sass": "node-sass sass/main.scss css/style.css -w -r",
     "devserver": "live-server",
     "start": "run-p devserver watch:sass"
   },

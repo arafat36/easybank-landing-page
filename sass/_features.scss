@@ -1,0 +1,15 @@
+.features { // grid 
+    //@extend %grid_4-2-1_col;
+    &__text-box { // grid item
+    }
+
+}
+
+.feature { // grid item
+    &__icon {}
+
+    &__heading {}
+
+    &__paragraph {}
+
+}

@@ -1,0 +1,76 @@
+.navigation { // flex-box
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 0 15rem;
+    height: 7rem;
+
+    z-index: 10;
+
+    &__logo-box { // flex-item
+        flex-basis: 16rem;
+        transform: translateY(4px);
+        // background-color: $color-primary-2;
+    }
+
+
+    &__nav-list { // flex-item, flex-box
+        // background-color: lightblue;
+        display: flex;
+        list-style: none;
+        align-self: stretch;
+    }
+
+    &__nav-item { // flex-item, flex
+        // background-color: lightcoral;
+        margin: 0 1rem;
+    }
+
+    &__nav-link:link,
+    &__nav-link:visited { // flex-item
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        position: relative;
+        
+        height: 100%;
+        padding: 0 1.5rem;
+        
+        color: inherit;
+        font-size: 1.6rem;
+        text-decoration: none;
+        text-shadow: 0 1px #0005;
+        // background-color: lightgreen;
+
+        transition: background-color .2s, transform .15s;
+
+        &::after {
+            content: "";
+            background-image: linear-gradient(to right, $color-primary-2, $color-primary-3);
+            
+            position: absolute;
+            bottom: 0;
+            width: 0;
+            height: 4px;
+
+            transition: width .15s; 
+        }
+
+        &:hover {
+            background-color: $color-grey-light;
+            transform: translateY(-2px);
+            &::after {
+                width: 100%;
+                transform: translateY(2px);
+            }
+        }
+
+    }
+
+
+    &__btn { // flex-item
+        font-size: 1.4rem;
+    }
+}

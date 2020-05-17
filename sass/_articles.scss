@@ -1,0 +1,14 @@
+.articles {  // grid
+    //@extend %grid_4-2-1_col;
+    &__text-box {  // grid-item
+
+    }
+}
+
+.article {  // grid-item
+    &__title {}
+
+    &__author {}
+
+    &__content {}
+}
