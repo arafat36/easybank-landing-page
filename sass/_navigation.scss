@@ -45,7 +45,6 @@
         color: inherit;
         font-size: 1.6rem;
         text-decoration: none;
-        text-shadow: 0 1px #0005;
         // background-color: lightgreen;
 
         transition: background-color .2s, transform .15s;
@@ -59,15 +58,16 @@
             width: 0;
             height: 4px;
 
-            transition: width .15s; 
+            transition: width .15s;
+            // transform: translateY(2px);
         }
 
         &:hover {
             background-color: $color-grey-light;
-            transform: translateY(-2px);
+            // transform: translateY(-2px);
             &::after {
                 width: 100%;
-                transform: translateY(2px);
+                // transform: translateY(2px);
             }
         }
 

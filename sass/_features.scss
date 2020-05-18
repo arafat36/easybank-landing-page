@@ -4,7 +4,7 @@
 
     & > *:first-child {
         display: grid;
-        grid-template-rows: 10rem min-content;
+        grid-template-rows: repeat(2, min-content);
         grid-row-gap: 7rem;
         grid-column-gap: 0.2rem;
     }
