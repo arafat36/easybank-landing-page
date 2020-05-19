@@ -1,28 +1,84 @@
 .footer {  // flex-box
-    &__top-container {}
+    background-color: $color-primary-1;
+    color: $color-white;
 
-    &__middle-container {}
+    &__inner {
+        display: flex;
+        justify-content: flex-start;
 
-    &__bottom-container {}
+        max-width: 120rem;
+        margin: 0 auto;
+        padding: 2em 0;
+
+        // background-color: lightyellow;
+    }
+
+    &__top-container { // flex-item, grid
+        display: grid;
+        align-content: space-between;
+        justify-items: center;
+
+        margin-right: 8%;
+
+        // background-color: lightskyblue;
+    }
+
+    &__middle-container { // flex-item
+        // 
+        display: flex;
+        margin-right: auto;
+        // background-color: lightcoral;
+    }
+
+    &__bottom-container { // flex-item, grid
+        display: grid;
+        background-color: lightgreen;
+    }
 
 
-    &__logo-box {}
+    &__logo-box {
+        // height: 2rem;
+
+        
+    }
 
 
-    &__social {}
+    &__social {
+        display: flex;
+        justify-content: space-between;
+        justify-self: stretch;
 
-    &__social-icon {}
+        svg {
+            width: 3rem;
+            height: 3rem;
+        }
+    }
+
+    &__social-icon {
+        &:hover {
+            fill: $color-primary-2;
+            color: $color-primary-2;
+        }
+    }
 
 
     &__nav-list {  // grid
-
+        list-style: none;
+        display: grid;
+        grid-template-columns: repeat(2, 8em);
+        // grid-template-rows: repeat()
+        align-content: space-between;
     }
 
     &__nav-item {  // grid-item
 
     }
 
-    &__nav-link {}
+    &__nav-link {
+        color: currentColor;
+        text-decoration: none;
+        font-size: .8em;
+    }
 
 
     &__btn {}

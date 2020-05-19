@@ -215,3 +215,43 @@ body {
   .article:hover {
     transform: translateY(-0.5rem);
     background-color: #edeff2; }
+
+.footer {
+  background-color: #2d314d;
+  color: white; }
+  .footer__inner {
+    display: flex;
+    justify-content: flex-start;
+    max-width: 120rem;
+    margin: 0 auto;
+    padding: 2em 0; }
+  .footer__top-container {
+    display: grid;
+    align-content: space-between;
+    justify-items: center;
+    margin-right: 8%; }
+  .footer__middle-container {
+    display: flex;
+    margin-right: auto; }
+  .footer__bottom-container {
+    display: grid;
+    background-color: lightgreen; }
+  .footer__social {
+    display: flex;
+    justify-content: space-between;
+    justify-self: stretch; }
+    .footer__social svg {
+      width: 3rem;
+      height: 3rem; }
+  .footer__social-icon:hover {
+    fill: #31d35c;
+    color: #31d35c; }
+  .footer__nav-list {
+    list-style: none;
+    display: grid;
+    grid-template-columns: repeat(2, 8em);
+    align-content: space-between; }
+  .footer__nav-link {
+    color: currentColor;
+    text-decoration: none;
+    font-size: .8em; }
