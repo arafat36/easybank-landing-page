@@ -18,7 +18,7 @@
         align-content: space-between;
         justify-items: center;
 
-        margin-right: 8%;
+        margin-right: 14%;
 
         // background-color: lightskyblue;
     }
@@ -32,14 +32,15 @@
 
     &__bottom-container { // flex-item, grid
         display: grid;
-        background-color: lightgreen;
+        // background-color: lightgreen;
+        justify-items: end;
+        grid-row-gap: .3em;
     }
 
 
     &__logo-box {
         // height: 2rem;
 
-        
     }
 
 
@@ -53,7 +54,7 @@
             height: 3rem;
         }
     }
-
+    // FIX this
     &__social-icon {
         &:hover {
             fill: $color-primary-2;
@@ -65,7 +66,7 @@
     &__nav-list {  // grid
         list-style: none;
         display: grid;
-        grid-template-columns: repeat(2, 8em);
+        grid-template-columns: repeat(2, 11em);
         // grid-template-rows: repeat()
         align-content: space-between;
     }
@@ -74,14 +75,35 @@
 
     }
 
-    &__nav-link {
+    &__nav-link:link,
+    &__nav-link:visited {
         color: currentColor;
         text-decoration: none;
         font-size: .8em;
+        transition: color .2s;
+        &:hover {
+            color: $color-primary-2;
+        }
     }
 
 
-    &__btn {}
+    &__btn {
+        font-size: .7em;
+    }
 
-    &__copyright {}
+    &__copyright {
+        font-size: .8em;
+        color: $color-grey-dark;
+    }
+    .attribution {
+        font-size: 1.1rem;
+        text-align: center;
+        color: $color-grey-dark;
+    
+        a {
+        color: hsl(228, 45%, 44%);
+        text-decoration: none;
+      }
+    }
+
 }
