@@ -16,11 +16,17 @@ $color-white:hsl(0, 0%, 100%); // - White
 $font-size-default: 1.8rem;
 
 /// Font
-
-//- Family: [Public Sans](https://fonts.google.com/specimen/Public+Sans)
-//- Weights: 300, 400
-
 $font-family-default: 'Public Sans', sans-serif;
+
+// MEDIA BREAKPOINTS
+// $bp-max
+$bp-lg: (max-width: 72.5em); // 1160px / 16px
+$bp-md: (max-width: 56.875em); // 1030px / 16px
+$bp-sm: (max-width: 52.1875em);  // 835px / 16px
+$bp-xs: (max-width: 42.1875em);  // 675px / 16px
+$bp-min: (max-width: 30.625em);  // 490px / 16px
+
+
 
 *,
 *::before,
@@ -33,19 +39,27 @@ $font-family-default: 'Public Sans', sans-serif;
 html {
     font-size: 62.5%;  // 1rem = 10px
     box-sizing: border-box;
+
+    @include media($bp-lg) {
+        font-size: 56.25%;
+    }
+
+    @include media($bp-lg) {
+        font-size: 50%;
+    }
 }
 
 body {
     font-family: $font-family-default;
-    font-size: $font-size-default;
+    font-size: 1.8rem;
     background-color: #fff;
     color: $color-grey-dark;
     overflow-x: hidden;
-}
 
-// %lighten:hover {
-//     opacity: 75%;
-// }
+    // @include media($bp-sm) {
+    //     font-size: 1.6rem;
+    // }
+}
 
 .row {
     max-width: 120rem;
@@ -57,13 +71,16 @@ body {
 .grid_4-2-1_col {
 
     grid-template-columns: repeat(4, 1fr); 
-    /*
-    @media only screen and (min-width: ...) {
-        grid-template-columns: repeat(1, 1fr)
-    }
-    @media only screen and (min-width: ...) {
+    
+    @include media($bp-sm) {
         grid-template-columns: repeat(2, 1fr)
     }
+    
+    @include media($bp-min) {
+        grid-template-columns: 1fr;
+        
+        max-width: 22em;
+    }/*
     @media only screen and (min-width: ...) {
         grid-template-columns: repeat(4, 1fr)
     }

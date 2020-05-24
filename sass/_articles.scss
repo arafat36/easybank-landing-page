@@ -1,13 +1,20 @@
 .articles {  // grid
     //@extend %grid_4-2-1_col;
     background-color: $color-grey-light;
+    padding: 0 2.5em;
+
     & > *:first-child {
         display: grid;
         grid-template-rows: repeat(2, min-content);
-        grid-row-gap: 5rem;
-        grid-column-gap: 2rem;
+        row-gap: 5rem;
+        column-gap: 2rem;
 
-        align-items: start
+        align-items: start;
+
+        @include media($bp-sm) {
+            row-gap: 3rem;
+            column-gap: 1.6em;
+        }
     }
 
     &__text-box {  // grid-item
@@ -22,6 +29,8 @@
     border-radius: 5px;
     overflow: hidden;
     background-color: $color-white; 
+
+
 
     transition: transform .2s, background-color .2s;
 
@@ -41,7 +50,7 @@
     &__content {
         padding: 1.7em 1.3em;
         display: grid;
-        grid-row-gap: .5em;
+        row-gap: .5em;
     }
 
     &__paragraph {

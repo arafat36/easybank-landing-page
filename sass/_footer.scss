@@ -1,40 +1,72 @@
 .footer {  // flex-box
     background-color: $color-primary-1;
     color: $color-white;
+    padding: 0 2.5em;
 
     &__inner {
         display: flex;
         justify-content: flex-start;
+        flex-wrap: wrap;
 
         max-width: 120rem;
         margin: 0 auto;
         padding: 2em 0;
 
         // background-color: lightyellow;
+
+        @include media($bp-xs) {
+            // flex-direction: column;
+            // align-items: center;
+        }
     }
 
     &__top-container { // flex-item, grid
         display: grid;
         align-content: space-between;
         justify-items: center;
+        row-gap: 2em;
 
         margin-right: 14%;
-
-        // background-color: lightskyblue;
+        margin-bottom: 3em;
+        @include media($bp-sm) {
+            margin-right: auto;
+        }
+        
+        @include media($bp-xs) {
+            flex: 0 0 60%;
+            flex-direction: column;
+            margin: 0 auto 2em;
+        }
     }
 
     &__middle-container { // flex-item
         // 
         display: flex;
-        margin-right: auto;
+        flex: 0 0 40%;
+        margin-bottom: 3em;
         // background-color: lightcoral;
+        @include media($bp-xs) {
+            flex: 0 0 100%;
+            flex-direction: column;
+            margin-bottom: 2em;
+        }
     }
 
     &__bottom-container { // flex-item, grid
         display: grid;
         // background-color: lightgreen;
         justify-items: end;
-        grid-row-gap: .3em;
+        align-items: start;
+        row-gap: .3em;
+        margin-left: auto;
+
+
+        @include media($bp-sm) {
+            flex: 0 0 100%;
+            justify-content: center;
+            justify-items: center;
+            // row-gap: 2em;
+        }
     }
 
 
@@ -64,15 +96,28 @@
 
 
     &__nav-list {  // grid
+        flex: 0 0 100%;
+
         list-style: none;
         display: grid;
-        grid-template-columns: repeat(2, 11em);
+        grid-template-columns: repeat(2, minmax(10em, 1fr));
         // grid-template-rows: repeat()
         align-content: space-between;
+
+        @include media($bp-xs) {
+            flex: 0 0 100%;
+            justify-content: center;
+            justify-items: center;
+            grid-template-columns: minmax(10em, 1fr);
+            // row-gap: 1em;
+            
+            // font-size: 1.4em;
+        }
     }
 
     &__nav-item {  // grid-item
-
+        // width: 100%;
+        padding: .4em 0;
     }
 
     &__nav-link:link,
@@ -89,6 +134,7 @@
 
     &__btn {
         font-size: .7em;
+        margin-bottom: 1em;
     }
 
     &__copyright {

@@ -6,12 +6,27 @@
 .heading-1 {
     @extend %heading;
     font-size: 3.1em;
+    @include media($bp-sm) {
+        font-size: 2.5em;
+    }
+    @include media($bp-xs) {
+        font-size: 3em;
+    }
 
+    @include media($bp-min) {
+        font-size: 2.2em;
+    }
 }
 
 .heading-2 {
     @extend %heading;
     font-size: 2.2em;
+    @include media($bp-sm) {
+        font-size: 1.9em;
+    }
+    // @include media($bp-xs) {
+    //     font-size: 2em;
+    // }
 }
 
 .heading-3 {

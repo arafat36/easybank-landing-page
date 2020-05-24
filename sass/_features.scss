@@ -1,31 +1,45 @@
 .features { // grid 
     //@extend %grid_4-2-1_col;
     background-color: $color-grey;
+    padding: 0 2.5em;
+
+    @include media($bp-min) {
+        text-align: center;
+    }
 
     & > *:first-child {
         display: grid;
         grid-template-rows: repeat(2, min-content);
-        grid-row-gap: 7rem;
-        grid-column-gap: 0.2rem;
+        row-gap: 7rem;
+        column-gap: 0.2rem;
+
+        @include media($bp-sm) {
+            row-gap: 5rem;
+            column-gap: 2em;
+        }
     }
 
     &__text-box { // grid item, grid
         display: grid;
-        grid-row-gap: 1.5em;
+        row-gap: 1.5em;
         grid-column: 1 / -1;
-        width: 56%;
+        max-width: 38em;
     }
 
 }
 
 .feature { // grid item, grid
     display: grid;
-    grid-row-gap: 1.3em;
+    row-gap: 1.3em;
 
     border-radius: .6rem;
     padding: 2em .88em;
 
     transition: transform .2s, background-color .2s;
+
+    @include media($bp-min) {
+        justify-items: center;
+    }
 
     &__icon {
     }

@@ -1,0 +1,7 @@
+
+
+@mixin media($breakpoint) {
+    @media only screen and #{$breakpoint} {
+        @content;
+    }
+}
