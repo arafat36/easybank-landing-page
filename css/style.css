@@ -105,6 +105,12 @@ body {
   position: relative;
   z-index: 10;
   box-shadow: 0 0 3rem #00000044; }
+  @media only screen and (max-width: 42.1875em) {
+    .navigation {
+      position: fixed;
+      width: 100%;
+      top: 0;
+      left: 0; } }
   .navigation__inner {
     display: flex;
     justify-content: space-between;
@@ -219,7 +225,8 @@ body {
       padding: 3em 1.5em;
       background: #fafafa url("../images/bg-intro-mobile.svg") no-repeat;
       background-position: left -21rem;
-      background-size: 100% auto; } }
+      background-size: 100% auto;
+      margin-top: 7rem; } }
   .header__inner {
     max-width: 120rem;
     margin: 0 auto;
@@ -356,6 +363,8 @@ body {
   .article:hover {
     transform: translateY(-0.5rem);
     background-color: #edeff2; }
+    .article:hover .article__title {
+      color: #31d35c; }
 
 .footer {
   background-color: #2d314d;
@@ -411,8 +420,7 @@ body {
       width: 3rem;
       height: 3rem; }
   .footer__social-icon:hover {
-    fill: #31d35c;
-    color: #31d35c; }
+    filter: sepia(1) saturate(70) hue-rotate(80deg) brightness(0.7); }
   .footer__nav-list {
     flex: 0 0 100%;
     list-style: none;

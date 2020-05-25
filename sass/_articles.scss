@@ -41,7 +41,9 @@
         height: 100%;
     }
 
-    &__title {}
+    &__title {
+        
+    }
 
     &__author {
         font-size: .7em;
@@ -60,5 +62,9 @@
     &:hover {
         transform: translateY(-.5rem);
         background-color: darken($color-grey, 2%);
+
+        & .article__title {
+            color: $color-primary-2;
+        }
     }
 }

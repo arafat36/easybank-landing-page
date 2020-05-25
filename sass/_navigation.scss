@@ -9,6 +9,13 @@
 
     box-shadow: 0 0 3rem #00000044;
 
+    @include media($bp-xs) {
+        position: fixed;
+        width: 100%;
+        top: 0;
+        left: 0;
+    }
+
     &__inner {
         display: flex;
         justify-content: space-between;

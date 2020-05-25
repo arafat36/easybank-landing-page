@@ -1,9 +1,8 @@
-var menuBurger = $(".menu-burger");
-var navList = $(".navigation__nav-list");
-console.log(menuBurger[0].classList)
-console.log(navList)
-menuBurger.on('click', e => {
+var menuBurger = document.querySelector(".menu-burger");
+var navList = document.querySelector(".navigation__nav-list");
+
+menuBurger.addEventListener('click', e => { 
     console.log(e);
-    menuBurger[0].classList.toggle("menu-open");
-    navList[0].classList.toggle("menu-open");
+    menuBurger.classList.toggle("menu-open");
+    navList.classList.toggle("menu-open");
 })

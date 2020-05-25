@@ -89,8 +89,7 @@
     // FIX this
     &__social-icon {
         &:hover {
-            fill: $color-primary-2;
-            color: $color-primary-2;
+            filter: sepia(1) saturate(70) hue-rotate(80deg) brightness(0.7)
         }
     }
 
